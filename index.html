@@ -12,7 +12,55 @@
         .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
         .accent-gradient { background: linear-gradient(90deg, #ff3e3e, #ff8e3e); }
         .input-dark { background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 10px; color: white; }
-    </style>
+    </style><style>
+    /* Personalización extra para el look "Pro" */
+    :root {
+        --gym-red: #ff3e3e;
+    }
+
+    body {
+        background: radial-gradient(circle at top right, #1a1a1a, #0a0a0a);
+        min-height: 100vh;
+    }
+
+    /* Animación de entrada para las tarjetas */
+    .glass-card {
+        animation: slideUp 0.6s ease-out forwards;
+        opacity: 0;
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Scrollbar minimalista estilo Apple */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--gym-red);
+    }
+
+    /* Estilo para los inputs cuando escribes */
+    input:focus {
+        box-shadow: 0 0 15px rgba(255, 62, 62, 0.2);
+        border-color: var(--gym-red) !important;
+    }
+</style>
 </head>
 <body class="p-4 md:p-8">
 
