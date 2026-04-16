@@ -3,6 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>IRON TRACKER | GYM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #050505; color: #eee; }
+        .glass-card { background: #111; border: 1px solid #222; border-radius: 12px; }
+        .accent-red { color: #ff3e3e; }
+        input { background: #1a1a1a; border: 1px solid #333; color: white; border-radius: 6px; padding: 8px; outline: none; }
+        input:focus { border-color: #ff3e3e; }
+    </style>
+</head>
+<body class="p-4 pb-20">
+
+    <header class="max-w-2xl mx-auto flex justify-between items-center mb-8">
+        <h1 class="text-2xl font-black italic tracking-tighter uppercase">IRON<span class="accent-red">TRACK</span></h1>
+        <input type="date" id="date-selector" class="text-xs font-bold uppercase bg-transparent border-none">
+    </header>
+
+    <main class="max-w-2xl mx-auto space-y-8">
+        
+        <section>
+            <h2 class="text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2 text-gray-400">
+                <i data-lucide="utensils" class="w-4 h-4 accent-red"></i> Plan Nutricional
+            </h2>
+            <div id="meal-container" class="space-y-3"></div>
+            
+            <div class="grid grid-cols-4 gap-2 mt-4 p-4 glass-card rounded-xl border-t-2 border-red-600">
+                <div class="text-center"><p class="text-[9px] text-gray-500 uppercase">P</p><p id="t-p" class="font-bold text-blue-400">0</p></div>
+                <div class="text-center"><p class="text-[9px] text-gray-500 uppercase">C</p><p id="t-c" class="font-bold text-green-400">0</p></div>
+                <div class="text-center"><p class="text-[9px] text-gray-500 uppercase">G</p><p id="t-g" class="font-bold text-yellow-400">0</p></div>
+                <div class="text-center"><p class="text-[9px] text-gray-500 uppercase accent-red">Kcal</p><p id="t-k" class="font-bold accent-red">0</p></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-gray-400">
+                    <i data-lucide="dumbbell" class="w-4 h-4 accent-red"></i> Sesión de Fuerza
+                </h2>
+                <button id="add-ex-btn<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>IRON TRACKER | ELITE</title>
