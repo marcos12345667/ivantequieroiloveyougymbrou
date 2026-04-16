@@ -9,6 +9,70 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body { font-family: 'Inter', sans-serif; background: #050505; color: #eee; }
+        .glass-card { background: #111; border: 1px solid #222; border-radius: 8px; }
+        .accent-red { color: #ff3e3e; }
+        input { background: #1a1a1a; border: 1px solid #333; color: white; border-radius: 4px; padding: 4px 8px; outline: none; }
+        input:focus { border-color: #ff3e3e; }
+        .meal-row { display: grid; grid-template-columns: 100px 1fr; gap: 10px; align-items: center; }
+    </style>
+</head>
+<body class="p-4 pb-20">
+
+    <header class="max-w-2xl mx-auto flex justify-between items-center mb-8">
+        <h1 class="text-2xl font-black italic tracking-tighter uppercase">IRON<span class="accent-red">TRACK</span></h1>
+        <input type="date" id="date-selector" class="text-xs font-bold uppercase bg-transparent border-none">
+    </header>
+
+    <main class="max-w-2xl mx-auto space-y-8">
+        
+        <section>
+            <h2 class="text-[10px] font-black uppercase tracking-widest mb-4 text-gray-500">Plan Nutricional</h2>
+            <div id="meal-container" class="space-y-4"></div>
+            
+            <div class="grid grid-cols-4 gap-2 mt-6 p-3 glass-card border-t-2 border-red-600">
+                <div class="text-center"><p class="text-[8px] text-gray-500 uppercase font-bold">P</p><p id="t-p" class="font-bold text-blue-400">0</p></div>
+                <div class="text-center"><p class="text-[8px] text-gray-500 uppercase font-bold">C</p><p id="t-c" class="font-bold text-green-400">0</p></div>
+                <div class="text-center"><p class="text-[8px] text-gray-500 uppercase font-bold">G</p><p id="t-g" class="font-bold text-yellow-400">0</p></div>
+                <div class="text-center"><p class="text-[8px] text-red-600 uppercase font-black">Kcal</p><p id="t-k" class="font-black">0</p></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-[10px] font-black uppercase tracking-widest text-gray-500">Sesión de Fuerza</h2>
+                <button id="add-ex-btn" class="bg-white text-black text-[9px] font-black px-3 py-1.5 rounded-full uppercase italic">+ Ejercicio</button>
+            </div>
+            <div id="workout-container" class="space-y-4"></div>
+        </section>
+
+        <div class="pt-4">
+            <button id="finish-btn" class="w-full bg-red-600 text-white font-black py-4 rounded-xl uppercase italic tracking-tight hover:bg-red-700 transition-all">
+                Finalizar Workout & Analizar
+            </button>
+            <div id="ai-result-card" class="mt-4 p-4 glass-card border-red-600/40 hidden">
+                <div class="flex items-center gap-2 mb-2">
+                    <i data-lucide="zap" class="w-4 h-4 text-red-600"></i>
+                    <span class="text-[10px] font-black uppercase tracking-widest">Iron Intelligence</span>
+                </div>
+                <p id="ai-response" class="text-sm text-gray-300 italic"></p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>IRON TRACKER | GYM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #050505; color: #eee; }
         .glass-card { background: #111; border: 1px solid #222; border-radius: 12px; }
         .accent-red { color: #ff3e3e; }
         input { background: #1a1a1a; border: 1px solid #333; color: white; border-radius: 6px; padding: 8px; outline: none; }
