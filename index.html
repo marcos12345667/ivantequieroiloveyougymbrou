@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>IRON TRACKER | ELITE</title>
+    <title>IRON TRACKER | GYM</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -13,26 +13,46 @@
         .accent-red { color: #ff3e3e; }
         input { background: #1a1a1a; border: 1px solid #333; color: white; border-radius: 6px; padding: 8px; outline: none; }
         input:focus { border-color: #ff3e3e; }
-        .table-header { font-size: 0.65rem; text-transform: uppercase; color: #666; font-weight: bold; }
+        .table-header { font-size: 0.65rem; text-transform: uppercase; color: #555; font-weight: 800; letter-spacing: 0.05em; }
     </style>
 </head>
-<body class="p-4 pb-24">
+<body class="p-4 pb-10">
 
     <header class="max-w-2xl mx-auto flex justify-between items-center mb-8 border-b border-white/5 pb-4">
-        <h1 class="text-2xl font-black italic tracking-tighter uppercase">IRON<span class="accent-red">TRACK</span></h1>
-        <input type="date" id="date-selector" class="text-xs font-bold uppercase bg-transparent border-none outline-none cursor-pointer">
+        <h1 class="text-2xl font-black italic tracking-tighter uppercase">Iron<span class="accent-red">Track</span></h1>
+        <input type="date" id="date-selector" class="text-xs font-bold uppercase bg-transparent border-none cursor-pointer">
     </header>
 
     <main class="max-w-2xl mx-auto space-y-10">
         
         <section>
-            <h2 class="text-xs font-black uppercase tracking-widest mb-4 flex items-center gap-2 text-gray-400">
-                <i data-lucide="utensils" class="w-4 h-4 accent-red"></i> Nutrición Diaria
+            <h2 class="text-xs font-black uppercase tracking-[0.2em] mb-4 flex items-center gap-2 text-gray-400">
+                <i data-lucide="utensils" class="w-4 h-4 accent-red"></i> Nutrición
             </h2>
             <div id="meal-container" class="space-y-4"></div>
             
-            <div class="grid grid-cols-4 gap-2 mt-6 p-4 glass-card border-t-2 border-red-600 shadow-lg shadow-red-900/10">
-                <div class="text-center"><p class="text-[9px] text-gray-500 uppercase font-bold">Prot</p><p id="t-p" class="font-black text-blue-400">0</p></div>
-                <div class="text-center"><p class="text-[9px] text-gray-500 uppercase font-bold">Carb</p><p id="t-c" class="font-black text-green-400">0</p></div>
-                <div class="text-center"><p class="text-[9px] text-gray-500 uppercase font-bold">Fat</p><p id="t-g" class="font-black text-yellow-400">0</p></div>
-                <div class="text-center"><p class="text-[9px] text-red-600 uppercase font-black italic tracking-tighter">Kcal</p><p id="t-k" class="font-black accent-red">0
+            <div class="grid grid-cols-4 gap-2 mt-6 p-4 glass-card border-t-2 border-red-600">
+                <div class="text-center"><p class="text-[9px] text-gray-500 font-bold uppercase">Prot</p><p id="t-p" class="font-bold text-blue-400">0g</p></div>
+                <div class="text-center"><p class="text-[9px] text-gray-500 font-bold uppercase">Carb</p><p id="t-c" class="font-bold text-green-400">0g</p></div>
+                <div class="text-center"><p class="text-[9px] text-gray-500 font-bold uppercase">Fat</p><p id="t-g" class="font-bold text-yellow-400">0g</p></div>
+                <div class="text-center"><p class="text-[9px] text-gray-500 font-bold uppercase accent-red">Kcal</p><p id="t-k" class="font-bold accent-red">0</p></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xs font-black uppercase tracking-[0.2em] flex items-center gap-2 text-gray-400">
+                    <i data-lucide="dumbbell" class="w-4 h-4 accent-red"></i> Workout
+                </h2>
+                <button id="add-ex-btn" class="text-[10px] bg-red-600 text-white font-black px-4 py-2 rounded-lg uppercase italic">
+                    + Añadir Ejercicio
+                </button>
+            </div>
+            <div id="workout-container" class="space-y-6"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
